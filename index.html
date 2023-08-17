@@ -232,7 +232,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            466 词 
+            468 词 
           </div>
         </div>
         
@@ -241,12 +241,12 @@
         
           <div class="truncate-text">
             关于wsl2走本机代理的教程网上层出不穷，且大多数教程都是通过修改~&#x2F;.bashrc文件加入bash脚本进行代理，虽然算不上麻烦，但也有一定的弊端
-有些命令行工具是不走代理的，包括pip和ping（我自己尝试了网上各种export https_proxy的配置方法后不管怎么样就是ping不通www.google.com，pip install也是无法使用，后来才知道ping和pip原来是不走代理）
+有些命令行工具是不走代理的，包括pip和ping（我自己尝试了网上各种export https_proxy的配置方法后不管怎么样就是ping不通google，同时pip install也是无法使用，后来才知道ping和pip原来是不走代理）
 但是今天翻知乎的时候无意中看到一位老哥的评论，只有短短一句话，甚至不需要在wsl2端内进行任何操作，我按照这位老哥的方法试了一下，发现十分有效，可以ping通google了，pip install也可以正常使用，下面就是操作方法（前提：本机使用的代理软件为clash for windows，v2rayn由于我个人没有使用过所以不清楚是否一致）
 
 
 如图，只需要在本机的Clash for Windows上将Allow LAN，Service Mode以及TUN Mode打开即可
-其中Service Mode激活方式为：点击右侧Manage，在弹出的窗口中点击Install，安装...  
+其中Service Mode激活方式为：点击右侧Manage，在弹出的窗口中点击Install，安装好服务之后C...  
           </div>
         
       </div>
