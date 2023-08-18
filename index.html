@@ -153,7 +153,7 @@
       
         <a class="archive-link" href="/archives/2023/08 ">
           八月 2023 
-          <div class="archive-count">1 </div>
+          <div class="archive-count">2 </div>
         </a>
       
         <a class="archive-link" href="/archives/2023/07 ">
@@ -171,6 +171,12 @@
     <div class="widget">
       <h3 class="widget-title">最新文章</h3>
       <ul>
+        
+          <a class="recent-link" href="/2023/08/18/%E8%AE%B0%E4%B8%80%E6%AC%A1wsl2-Ubuntu-22-04LTS%E4%B8%AD%E5%85%B3%E4%BA%8Ewindows%E8%A3%85%E4%BA%86CUDA%E4%BD%86%E6%98%AFnvidia-sm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E7%9A%84%E5%B0%8F%E5%9D%91/" title="记一次WSL2 Ubuntu 22.04LTS中关于windows装了CUDA但是nvidia-smi无法运行的小坑" >
+            <div class="recent-link-text">
+              记一次WSL2 Ubuntu 22.04LTS中关于windows装了CUDA但是nvidia-smi无法运行的小坑
+            </div>
+          </a>
         
           <a class="recent-link" href="/2023/08/17/WSL2%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%9C%BAClash-for-Windows%E4%BB%A3%E7%90%86/" title="WSL2使用本机Clash for Windows代理" >
             <div class="recent-link-text">
@@ -200,6 +206,75 @@
     </div>
     <div id="content-body">
       
+   
+
+<article id="post-记一次wsl2-Ubuntu-22-04LTS中关于windows装了CUDA但是nvidia-sm无法运行的小坑" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2023/08/18/%E8%AE%B0%E4%B8%80%E6%AC%A1wsl2-Ubuntu-22-04LTS%E4%B8%AD%E5%85%B3%E4%BA%8Ewindows%E8%A3%85%E4%BA%86CUDA%E4%BD%86%E6%98%AFnvidia-sm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E7%9A%84%E5%B0%8F%E5%9D%91/">记一次WSL2 Ubuntu 22.04LTS中关于windows装了CUDA但是nvidia-smi无法运行的小坑</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-08-18T14:18:39.000Z" itemprop="datePublished">2023-08-18</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            189 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            今天在安装配置WSL2  Ubuntu 20.04 LTS时出现了已经装了CUDA但是在Ubuntu终端运行nvidia-smi提示”找不到此命令“的情况，之前使用的Ubuntu22.04并未出现此问题，cd进&#x2F;usr&#x2F;lib&#x2F;wsl&#x2F; 后，ls查看后发现是有nvidia-smi文件的，google之后找到了相关的解决方案：
+将nvidia-smi移动至 &#x2F;usr&#x2F;bin&#x2F; 下即可
+12sudo cp /usr/lib/wsl/lib/nvidia-smi /usr/bin/nvidia-smisudo chmod ogu+x /usr/bin/nvidia-smi
+
+我不清楚这是WSL2的文件结构问题还是Ubuntu 20.04LTS本身的文件结构问题，安装路径和执行路径不一致导致命令无法被正常执行，总之记下这个小坑，希望能帮助到有同样问题的人
+  
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2023/08/18/%E8%AE%B0%E4%B8%80%E6%AC%A1wsl2-Ubuntu-22-04LTS%E4%B8%AD%E5%85%B3%E4%BA%8Ewindows%E8%A3%85%E4%BA%86CUDA%E4%BD%86%E6%98%AFnvidia-sm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E7%9A%84%E5%B0%8F%E5%9D%91/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+ 
+
    
 
 <article id="post-WSL2使用本机Clash-for-Windows代理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
